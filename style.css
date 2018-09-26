@@ -125,7 +125,8 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   height: 100vh; }
 
 .background-second {
-  height: 50vh;
+  height: auto;
+  padding: 0rem 2rem 5rem 2rem;
   background-color: #342E33;
   color: white; }
 
@@ -135,12 +136,13 @@ ORDER: BASE + typography > general layout + grid > page layout > components
 .background-fourth {
   height: auto;
   background-color: #342E33;
-  padding: 10rem 0;
+  padding: 10rem 2rem;
   color: var(--color-white); }
 
 .background-fifth {
   height: 30vh;
-  background-color: gray; }
+  background-color: gray;
+  padding: 0rem 2rem; }
 
 .header {
   font-size: var(--font-size-huge);
@@ -188,6 +190,21 @@ ORDER: BASE + typography > general layout + grid > page layout > components
     margin-top: 10rem;
     margin: auto; }
 
+/*
+0 - 600px phone
+600 - 900px tablet portrait
+900 - 1200px Tablet landspace
+1200 - 1800px is where our normal style apply
+1800px + Big desktop
+
+$breakpoint argument choices:
+
+- phone
+- tab - port
+- tab - land
+- big - desktop
+
+*/
 .navigation__checkbox {
   display: none; }
 
@@ -203,7 +220,7 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   text-align: center;
   cursor: pointer; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (min-width: 56.25em) {
     .navigation__button {
       top: 4rem;
       right: 4rem; } }
@@ -222,7 +239,7 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   background-image: radial-gradient(#FFB65D, #FFD769);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (min-width: 56.25em) {
     .navigation__background {
       top: 4.5rem;
       right: 4.5rem; } }
@@ -397,12 +414,44 @@ ORDER: BASE + typography > general layout + grid > page layout > components
     display: block;
     border: 0;
     width: 100%;
+    margin: auto;
+    padding: auto;
     height: 350px; }
+    @media only screen and (max-width: 37.5em) {
+      .team img {
+        width: 80%; } }
+    @media only screen and (min-width: 37.5em) {
+      .team img {
+        width: 80%; } }
+    @media only screen and (min-width: 56.25em) {
+      .team img {
+        width: 70%; } }
+    @media only screen and (min-width: 75em) {
+      .team img {
+        width: 80%; } }
+    @media only screen and (min-width: 112.5em) {
+      .team img {
+        width: 100%; } }
   .team-card {
     flex: 1 0 500px;
     box-sizing: border-box;
     margin: 1rem 0.25em;
     width: 1500px; }
+    @media only screen and (max-width: 37.5em) {
+      .team-card {
+        max-width: calc(100% - 1em); } }
+    @media only screen and (min-width: 37.5em) {
+      .team-card {
+        max-width: calc(50% - 1em); } }
+    @media only screen and (min-width: 56.25em) {
+      .team-card {
+        max-width: calc(33% - 1em); } }
+    @media only screen and (min-width: 75em) {
+      .team-card {
+        max-width: calc(25% - 1em); } }
+    @media only screen and (min-width: 112.5em) {
+      .team-card {
+        max-width: calc(25% - 1em); } }
     .team-card a {
       color: black;
       text-decoration: none;
@@ -415,14 +464,6 @@ ORDER: BASE + typography > general layout + grid > page layout > components
         font-weight: bold; }
       .team-card__content p {
         font-size: 80%; }
-
-@media screen and (min-width: 40em) {
-  .team-card {
-    max-width: calc(50% - 1em); } }
-
-@media screen and (min-width: 60em) {
-  .team-card {
-    max-width: calc(25% - 1em); } }
 
 .university-spec {
   display: flex;
