@@ -75,6 +75,9 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   position: relative;
   border: none;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .btn, .btn:link, .btn:visited {
+      margin-bottom: 3rem; } }
 
 .btn:hover {
   transform: translate(-0.3rem);
@@ -156,7 +159,7 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   height: 100vh; }
   @media only screen and (max-width: 37.5em) {
     .background-first {
-      height: 100vh; } }
+      height: auto; } }
 
 .background-second {
   height: auto;
@@ -218,6 +221,10 @@ ORDER: BASE + typography > general layout + grid > page layout > components
       text-align: center;
       padding-top: 13rem;
       font-size: var(--font-size-verylarge); } }
+  @media only screen and (max-width: 56.25em) {
+    .logo {
+      text-align: center;
+      padding-top: 13rem; } }
   .logo span {
     color: #FFB65D;
     text-transform: uppercase; }
