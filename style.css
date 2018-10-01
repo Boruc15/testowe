@@ -16,7 +16,8 @@
   padding: 0; }
 
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  font-family: 'Roboto Slab', serif; }
 
 /*
 0 - 600px phone
@@ -61,7 +62,7 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   overflow: hidden; }
   @media only screen and (max-width: 37.5em) {
     .bg-video {
-      height: 120%; } }
+      height: 12/0%; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -182,7 +183,6 @@ ORDER: BASE + typography > general layout + grid > page layout > components
   color: var(--color-white); }
 
 .background-fifth {
-  background-color: var(--color-gray-light);
   height: auto;
   padding: 7rem 2rem; }
 
